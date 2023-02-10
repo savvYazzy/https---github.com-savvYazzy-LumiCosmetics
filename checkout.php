@@ -1,3 +1,4 @@
+
 <?php require('views/layout/nav.php'); ?>
 <?php require('views/layout/header.php'); ?>
 <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
