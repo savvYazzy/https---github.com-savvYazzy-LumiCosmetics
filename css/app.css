@@ -1,0 +1,563 @@
+
+* {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    background: rgb(211,204,198);
+    background: linear-gradient(180deg, rgba(211,204,198,0.63) 0%, rgba(229,229,229,0.41) 100%);
+    font-size: 1.1rem;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    width: 100%;
+    text-align: center;
+    background: rgb(211,204,192);
+    background: linear-gradient(90deg, rgba(211,204,192,0.26934523809523814) 0%, rgba(133,146,137,0.2665441176470589) 41%, rgba(95,90,88,0.2777485994397759) 63%, rgba(190,196,202,0.3085609243697479) 100%);
+
+}
+     a {
+        color: #5F6554;
+        font-size: 2rem;
+        letter-spacing: 0.5px;
+        font-weight: 100;
+        line-height: 66px;
+        font-family: 'Nunito', sans-serif;        
+        text-decoration: none;
+        margin: 9px 10px;
+        
+    }
+
+    nav > a:hover {
+        opacity: 60%;
+    }
+
+       nav > a:nth-child(1) {
+            color: #7f868e;
+        }
+        nav > a:nth-child(2) {
+            color: #5F5A58;
+        }
+        nav > a:nth-child(3) {
+            color: #859289;
+        }
+        nav > a:nth-child(4) {
+            color: #524d48;
+        }
+
+header {
+    width: 100%;
+    height:210px;
+    background-position: center;
+    padding: 50px;
+}
+
+main {
+    width: 100%;
+    height: 700px;
+    padding: 48px 20px;
+}
+    main > h1 {
+        text-align: left;
+    }
+
+footer {
+    width: 100%;
+    height: 80px;
+    padding-top: 21px;
+    background: #eee;
+    text-align: center;
+}
+    
+
+/* ========== LOG IN =========== */
+
+
+
+
+#login_form {
+    width: 100%;
+    margin-left: 500px;
+    margin-top: -20px;
+    
+}
+
+    #login_form > input[type="text"], input[type="password"] {
+        background: #5f5b5a32;
+        border: 1px solid #5f5b5a32;
+        color: #000000;
+        font-weight: 900;
+        
+    }
+
+    input::placeholder {
+        color: rgba(255, 255, 255, 0.757);
+        font-weight: 900;
+    }
+
+    #login_form > input[type="submit"] {
+        background: #7a7e6bb2;
+        width: 150px;
+        color: #fff;
+        border: 1px solid #7a7e6bb2;
+    }
+
+    #login_form > input[type="submit"]:hover {
+        background: #5c614d;
+        cursor: pointer;
+        transform: scale(1.075);
+        transition: 0.2s ease-in;
+    }
+
+    input {
+        padding: 18px 18px;
+        border-radius: 18px;
+        margin: 15px;
+        font-size: 0.9rem;
+    }
+
+
+
+/* ========== LINK TO CREATE ACCOUNT =========== */
+
+
+
+        #create_account_link {
+            font-size: 1rem;
+            font-weight: 100;
+            color: rgba(55, 41, 41, 0.794);
+            margin-left: 150px;
+        }
+        
+        #create_account_link:hover {
+            color: #222;
+        }
+
+
+
+
+/* ========== SIGN UP =========== */
+
+
+
+#sign_up_form {
+    width: 40%;
+    margin: 100px auto;
+    background: rgb(74, 78, 70);
+    padding: 50px 100px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+#sign_up_form > input {
+    background: rgba(74, 78, 70, 0.455);
+    border: 1px solid rgba(255, 255, 255, 0.455);
+    color: #fff;
+    text-align: center;
+}
+
+#sign_up_form > button {
+    background: rgb(211,204,198);
+    margin-top: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.546);
+    width: 200px;
+    padding: 10px;
+    border-radius: 19px;
+    color: rgb(211,204,198);
+    background: rgba(0, 0, 0, 0.546);
+
+    font-size: 1rem;
+}
+
+#sign_up_form > button:hover {
+    background: rgb(211,204,198);        
+    color: rgba(0, 0, 0, 0.546);
+    border: 1px solid rgb(211,204,198);
+    transform: scale(1.075);
+    transition: 0.2s ease-in;
+}
+
+
+/* ========== LOG OUT =========== */
+
+
+#logout_form {
+    width: 1630px;
+    float: right;
+    z-index: 4;
+    height: auto;
+    font-size: 3rem;
+    margin-top: -30px;
+    color: rgba(255, 255, 255, 0.594);
+    background: rgba(70, 107, 89, 0.441);
+    padding: 30px 50px;
+    border-radius: 8px;
+}
+
+    #logoutBTN {
+        background: #ffffff88;
+        border: 1px solid #ffffff88;
+        padding: 30px 80px;
+        font-size: 1rem;
+        margin-left: 400px;
+    }
+
+    #logoutBTN:hover {
+        background: rgba(255, 255, 255, 0.594);
+        cursor: pointer;
+        transform: scale(1.075);
+        transition: 0.2s ease-in;
+    }
+
+
+    
+    /* ========== CATEGORIES =========== */
+    
+        #categories {
+            padding-left: 20px;
+            margin-left: 27px;
+            margin-top: 10px;
+            
+            }
+    
+            .category {
+                width: 251px;
+                height: 468px;
+                border-radius: 19px;
+                box-shadow: 3px 3px 5px #777;
+                float: left;
+                margin: 10px 50px;
+                overflow: hidden; 
+            }
+
+            .category:hover {
+                transform: scale(1.075);
+                transition: 0.2s ease-in;
+            }
+    
+            .cat_label {
+                margin-left: 18px;
+                font-size: 2rem;
+                font-weight: 900;
+            }
+
+            #saleCat {
+                padding: 30px 50px;
+                background: #BA8B62;
+                color: rgba(255, 255, 255, 0.672);
+                text-align: center;
+                border: 19px;
+                
+            }
+
+            #saleCat:hover {
+                background: #5c614d;
+                cursor: pointer;
+                transition: 0.2s ease-in;
+            }
+
+/* ========== CART =========== */
+
+
+#cart_left {
+    width: 20%;
+    float: left;
+    text-align: left;
+}
+
+#cart_right {
+    width: 80%;
+    float: right;
+    padding-left: 21px;
+    border-left: 1px solid #444;
+}
+
+.cart_icon {
+    width: 32px;
+    margin-left: -20px;
+    color: #444;
+    opacity: .76;
+}
+
+#cart_count {
+    font-weight: 700;
+    font-size: 2.1rem;
+    color: #2b1c05;
+    margin-left: -18px;
+}
+
+.line_item {
+    width: 100%;
+    height: 50px;
+    background: rgba(116, 131, 116, 0.485);
+    font-size: 1.4rem;
+    border-radius: 19px;
+    font-weight: 500;
+    padding: 5px 25px;
+    display: block;
+}
+
+.line_item:nth-child(even) {
+    background: rgba(215, 205, 195, 0.584);
+}
+
+/* ========== PRODUCT DETAIL =========== */
+
+
+.product_detail {
+    text-align: right;
+    float: left;
+    width: 33%;
+}
+
+        .product_detail:last-child {
+            width: 34%;
+        }
+
+        #product_details_container {
+            width: 80%;
+            margin: 0 auto;
+            min-height: 800px;
+            height: auto;
+            font-size: 1.9rem;
+        }
+
+        #product_details_details {
+            width: calc(100% - 530px);
+            padding: 25px 75px;
+            padding-top: 0;
+            float: left;
+
+        }
+            #product_name_span {
+                font-size: 2.67rem;
+                font-weight: 900;
+            }
+
+            #product_price_span {
+                font-size: 2.5rem;
+                color: #666;
+                font-weight: 900;
+            }
+
+            #product_image_container {
+                width: 530px;
+                float: left;
+            }
+
+            .hero_image {
+                width: 400px;
+                height: 480px;
+                margin-bottom: 25px;
+                margin-top: 25px;
+                border: 3px solid rgba(255, 255, 255, 0.461);
+                border-radius: 8px;
+                display: block;
+            }
+
+            .hero_image:hover {
+                    transform: scale(1.075);
+                    transition: 0.2s ease-in;
+            }
+
+            .product_tile:hover {
+                transform: scale(1.075);
+                transition: 0.2s ease-in;
+            }
+
+            .product_details_image {
+                width: 80px;
+                height: 100px;
+                margin: 0 2px;
+                border: 3px solid rgba(255, 255, 255, 0.468);
+                border-radius: 8px;
+            }
+
+            .product_details_image:hover {
+                transform: scale(1.075);
+                transition: 0.2s ease-in;
+            }
+
+            input[type="number"] {
+                border: 2px solid #fff;
+            }
+
+            #product_panel {
+                min-width: 640px;
+                height: 100vh;
+                background: #fff;
+                border-left: 3px solid #333;
+                position: fixed;
+                z-index: 7;
+                top: 0;
+                right: -640px;
+            }
+
+
+            .product_tile {
+                width: 15%;
+                height: auto;
+                border: 3px solid #fff;
+                float: left;
+                margin: 20px 42px;
+                border-radius: 9px;
+            }
+
+                .product_tile_image {
+                    width: 100%;
+                    height: 250px;
+                    margin-bottom: 7px;
+                    overflow: hidden;
+                }
+
+                
+                .product_tile_image > img {
+                    border-top-left-radius: 8px;
+                    border-top-right-radius: 8px;
+                    overflow: hidden;
+                }
+
+                .product_tile_details {
+                    width: 100%;
+                    height: 150px;
+                    padding: 10px 15px;
+                }
+
+                .product_tile_details > h3 {
+                    margin-top: 0;
+                    background: #49443ec1;
+                    color: rgba(255, 255, 255, 0.676);
+                    font-weight: 900;
+                    padding: 11px;
+                    border-radius: 3px;
+                }
+
+                .product_tile_details > a {
+                    font-size: 1.1rem;
+                    float: right;
+                }
+
+                .productImage {
+                    width: 100%;
+                    height: auto;
+                }
+
+                #LogCart {
+                    background: #000000a5;
+                    color: rgb(255, 255, 255);
+                    font-size: 1.6rem;
+                    padding: 10px 15px;
+                    width: 100%;
+                    border-radius: 8px;
+                    border: 1px solid #0000007e;
+                    margin-top: 10px;
+                    cursor: pointer;
+                }
+
+                #LogCart:hover {
+                    background: #000000b6;
+                    transform: scale(1.075);
+                    transition: 0.2s ease-in;
+                }
+                
+/* ========== CART CONTROLS =========== */
+
+
+        #cart_controls {
+            width: 360px;
+            float: right;
+            text-align: right;
+            position: relative;
+            right: 0;
+            bottom: 0;
+            border-top: 1px solid #bbb;
+            padding-top: 25px;
+        }
+            #cart_controls > input[type="number"] {
+                font-size: 2rem;
+                padding-left: 15px;
+                font-weight: 500;
+                margin-right: 6px;
+            }
+            #cart_controls > select {
+                font-size: 2rem;
+                padding: 2px 0;
+                padding-left: 15px;
+                font-weight: 500;
+            }
+            #cart_controls > button {
+                background: rgb(116, 131, 116);
+                color: #fff;
+                font-size: 1.6rem;
+                padding: 10px 15px;
+                width: 100%;
+                border-radius: 8px;
+                border: 3px solid #ddd;
+                margin-top: 10px;
+                cursor: pointer;
+            }
+            #cart_controls > button:hover {
+                background: #c29163;
+                color: rgb(255, 255, 255);
+                transform: scale(1.075);
+                transition: 0.2s ease-in;
+            }
+            .MyAccountOrderDetails {
+                width: 80%;
+                margin-left: 710px;
+            }
+
+            .MyAccountOrderDetails > h3 {
+                display: inline-block;
+                margin-right: 5px;
+                margin-top: 65px;
+                margin-left: 40px;
+                font-size: 1.5rem;
+                background: rgba(215, 205, 195, 0.584);
+                border-radius: 9px;
+                padding: 20px;
+            }
+
+            .page-heading {
+                font-size: 3.0rem;
+                background: rgba(215, 205, 195, 0.584);
+                border-radius: 9px;
+                padding: 20px;
+                width: 50%;
+                margin-left: 490px;
+                text-align: center;
+                margin-bottom: -36px;
+
+            }
+
+            .about-heading {
+                margin-left: 50px;    
+                margin-right: 50px;    
+                text-align: center;        
+        
+            }
+
+       
+
+          
+
+    
+
+
+
+
+
+
+
+    
+ 
