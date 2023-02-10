@@ -2,7 +2,7 @@
 <?php require('views/layout/nav.php'); ?>
 <?php require('views/layout/header.php'); ?>
 
-
+<br>
 <div class="about-heading">Welcome to Lumi Cosmetics, your one-stop shop for all things organic and natural. We are dedicated to providing our customers with the highest quality and most nourishing personal care products on the market. Our collection of organic soaps, exfoliates, and other beauty products are made with only the purest and most wholesome ingredients, ensuring that you receive the maximum benefits for your skin and overall health.<br><br>
 
 At Lumi Cosmetics, we believe that what you put on your skin is just as important as what you put in your body. That's why we only use natural and organic ingredients in our products, free from harmful chemicals and synthetic preservatives. We source our ingredients from trusted suppliers who share our commitment to sustainable and ethical practices.<br><br>
