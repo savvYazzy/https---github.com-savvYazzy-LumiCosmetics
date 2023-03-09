@@ -111,7 +111,7 @@ footer {
     
 }
 
-    #login_form > input[type="text"], input[type="password"] {
+    #login_form > input[type="text"],  #login_form > input[type="password"] {
         background: #5f5b5a32;
         border: 1px solid #5f5b5a32;
         color: #000000;
@@ -124,7 +124,9 @@ footer {
         margin-right: 15px;
     }
 
-    input::placeholder {
+
+    #login_form input::placeholder, #logout_form input::placeholder, #sign_up_form input::placeholder
+     {
         color: rgba(255, 255, 255, 0.757);
         font-weight: 900;
     }
@@ -143,7 +145,7 @@ footer {
         transition: 0.2s ease-in;
     }
 
-    input {
+    #login_form > input, #logout_form > input, #sign_up_form > input, #contact-form > input {
         padding: 18px 18px;
         border-radius: 18px;
         margin: 15px;
@@ -170,11 +172,11 @@ footer {
 
 
 
-/* ========== SIGN UP =========== */
+/* ========== SIGN UP  / CONTACT =========== */
 
 
 
-#sign_up_form {
+#sign_up_form, #contact-form {
     width: 40%;
     margin: 100px auto;
     background: rgb(74, 78, 70);
@@ -183,14 +185,14 @@ footer {
     text-align: center;
 }
 
-#sign_up_form > input {
+#sign_up_form > input, #contact-form > input {
     background: rgba(74, 78, 70, 0.455);
     border: 1px solid rgba(255, 255, 255, 0.455);
     color: #fff;
     text-align: center;
 }
 
-#sign_up_form > button {
+#sign_up_form > button, #contact-form > button {
     background: rgb(211,204,198);
     margin-top: 10px;
     border: 1px solid rgba(0, 0, 0, 0.546);
@@ -203,7 +205,7 @@ footer {
     font-size: 1rem;
 }
 
-#sign_up_form > button:hover {
+#sign_up_form > button:hover, #contact-form > button:hover {
     background: rgb(211,204,198);        
     color: rgba(0, 0, 0, 0.546);
     border: 1px solid rgb(211,204,198);
@@ -644,11 +646,35 @@ footer {
                 background: rgba(255, 255, 255, 0.594);
             }
 
-            #contact-form {
-                width: 70%;
-                margin-left: 10%;
-            }
       
+      #contact-form > textarea {
+        padding: 36px 56px;
+        border-radius: 18px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        font-size: 0.9rem;
+        background: rgb(211,204,198);  
+        border: 1px solid rgba(255, 255, 255, 0.455);
+        color: #fff;
+        text-align: center;
+        
+
+      }
+
+      #contact-form > input {
+        background: rgb(211,204,198);  
+        color:rgba(0, 0, 0, 0.546)
+
+      }
+
+    
+
+      #contact-form input::placeholder, textarea::placeholder {
+        color:rgba(0, 0, 0, 0.546)
+      }
+
+
+
           
 
     
