@@ -1,6 +1,7 @@
 
-<?php require('views/layout/header.php'); ?><br>
 <?php require('views/layout/nav.php'); ?>
+
+<?php require('views/layout/header.php'); ?><br>
 
 <?php 
     if(isset($_GET['catID'])) {

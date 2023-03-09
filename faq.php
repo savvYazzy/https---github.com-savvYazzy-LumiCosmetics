@@ -1,6 +1,7 @@
+<?php require('views/layout/nav.php'); ?>
 <?php require('views/layout/header.php'); ?>
 
-<?php require('views/layout/nav.php'); ?>
+
 
 
 <span class="about-heading">

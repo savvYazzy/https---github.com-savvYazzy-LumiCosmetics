@@ -68,6 +68,11 @@ nav {
             text-decoration: none;
 
         }
+        nav > a:nth-child(7) {
+            color: #859289;
+            text-decoration: none;
+
+        }
 
 header {
     width: 100%;
@@ -566,6 +571,20 @@ footer {
         
             }
 
+            .about-heading > h2, .contact-heading {
+                font-size: 6rem;
+                color: #000000a8;
+                margin-left: 50px;    
+                margin-right: 50px;    
+                text-align: center; 
+            }
+
+            .contact-sub {
+                margin-left: 50px;    
+                margin-right: 50px;    
+                text-align: center; 
+            }
+
             .about-heading > h3 {
                 font-size: 3rem;
                 color: #000000a8;
@@ -625,6 +644,11 @@ footer {
                 background: rgba(255, 255, 255, 0.594);
             }
 
+            #contact-form {
+                width: 70%;
+                margin-left: 10%;
+            }
+      
           
 
     

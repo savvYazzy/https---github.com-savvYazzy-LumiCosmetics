@@ -5,5 +5,6 @@
     <a href="cart.php" alt="navigation">Cart</a>
     <a href="admin.php" alt="navigation">Admin</a>
     <a href="faq.php" alt="navigation">FAQ</a>
+    <a href="contact.php" alt="navigation">Contact</a>
 </nav>
  
