@@ -44,15 +44,29 @@ nav {
 
        nav > a:nth-child(1) {
             color: #7f868e;
+            text-decoration: none;
         }
         nav > a:nth-child(2) {
             color: #5F5A58;
+            text-decoration: none;
         }
         nav > a:nth-child(3) {
             color: #859289;
+            text-decoration: none;
         }
         nav > a:nth-child(4) {
             color: #524d48;
+            text-decoration: none;
+        }
+        nav > a:nth-child(5) {
+            color: #7f868e;
+            text-decoration: none;
+
+        }
+        nav > a:nth-child(6) {
+            color: #5F5A58;
+            text-decoration: none;
+
         }
 
 header {
@@ -98,6 +112,11 @@ footer {
         color: #000000;
         font-weight: 900;
         
+    }
+
+    #login_form > input[type="password"] {
+        margin-left: 15px;
+        margin-right: 15px;
     }
 
     input::placeholder {
@@ -547,7 +566,64 @@ footer {
         
             }
 
+            .about-heading > h3 {
+                font-size: 3rem;
+                color: #000000a8;
+            }
+
        
+            .promo-code {
+                font-size: 3.0rem;
+                background: rgba(116, 131, 116, 0.485);
+                border-radius: 9px;
+                padding: 20px;
+                width: 50%;
+                margin-left: 490px;
+                text-align: center;
+                margin-bottom: -36px;
+
+            }
+
+            .promo-code > input[type=text] {
+                font-size: 1rem;
+                padding: 0;
+                margin: 0;
+            }
+
+            .promo-code > input[type="button"] {
+                font-size: 0.5rem;
+                padding: 0;
+                margin: 0;
+            }
+
+            #qty-update {
+                text-align: right;
+                float: left;
+                width: 33%;
+                font-size: 1.1rem;
+            }
+
+            #qty-update:last-child {
+                width: 34%;
+            }
+            
+            input[type="number"] {
+                margin: 0;
+                padding: 0;
+                border-radius: 0%;
+                border: none;
+                color: #000000;
+                background: transparent;
+
+            }
+              
+            .promo-code > button {
+                font-size: 1.5rem;
+                border-radius: 30%;
+                padding: 5px 10px;
+                border: 1px solid #ffffff6f;
+                background: rgba(255, 255, 255, 0.594);
+            }
 
           
 

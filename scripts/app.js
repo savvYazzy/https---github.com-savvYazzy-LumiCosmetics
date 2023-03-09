@@ -23,3 +23,21 @@ let product_details_images = document.querySelectorAll('.product_details_image')
 function SwapImage(imageURL) {
     hero_image.setAttribute('src', imageURL);
 }
+
+
+
+function updateTotalPrice(element) {
+    var xhr = new XMLHttpRequest();
+    var qty = element.value;
+    var itemId = element.parentElement.querySelector("input[name='item_id']").value;
+
+    xhr.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            document.getElementById("total-price").innerHTML = this.responseText;
+        }
+    };
+
+    xhr.open("POST", "update_total_price.php", true);
+    xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xhr.send("qty=" + qty + "&item_id=" + itemId);
+}

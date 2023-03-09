@@ -1,5 +1,5 @@
 
-<?php require('views/layout/header.php'); ?>
+<?php require('views/layout/header.php'); ?><br>
 <?php require('views/layout/nav.php'); ?>
 
 <?php 

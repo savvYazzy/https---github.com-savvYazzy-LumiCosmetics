@@ -62,6 +62,27 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     
     <title>Lumi Cosmetics E-Commerce Shop</title>
+   
+    <!-- other head elements -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('input[name="qty"]').change(function() {
+                var item_id = $(this).closest('.line_item').find('input[name="item_id"]').val();
+                var qty = $(this).val();
+                $.ajax({
+                    type: "POST",
+                    url: "update_qty.php",
+                    data: { item_id: item_id, qty: qty },
+                    success: function(data) {
+                        $('#total_price').html('$' + data);
+                    }
+                });
+            });
+        });
+    </script>
+
+
 </head>
 <body>
 

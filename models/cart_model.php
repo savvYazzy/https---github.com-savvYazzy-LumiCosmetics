@@ -54,6 +54,13 @@
         }
     }
     
+    function update_qty($item_id, $qty) {
+        global $db;
+        $query = "UPDATE item
+                    SET qty = $qty
+                    WHERE itemID = $item_id";
+        $db->query($query);
+    }
 
     function get_total_price($cart_id) {
         global $db;
@@ -66,12 +73,49 @@
         return $total_price;
     }
     
-    function update_qty($item_id, $qty) {
-        global $db;
-        $query = "UPDATE item
-                    SET qty = $qty
-                    WHERE itemID = $item_id";
-        $db->query($query);
+    function get_promo_code_discount($promo_code) {
+        global $conn;
+        $query = "SELECT discount_amount FROM promo_codes WHERE promo_code = ?";
+        $stmt = $conn->prepare($query);
+        $stmt->bind_param("s", $promo_code);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        if ($result->num_rows > 0) {
+          $row = $result->fetch_assoc();
+          return $row['discount_amount'];
+        } else {
+          return false;
+        }
+      }
+
+   // Function to apply a promo code to the cart and return the new total price
+function apply_promo_code($promo_code, $cart_id, $db) {
+    // Prepare the SQL statement to retrieve the promo code information
+    $query = "SELECT promo_code_id, discount_amount, is_active FROM promo_codes WHERE promo_code = '$promo_code'";
+    $result = $db->query($query);
+  
+    // Fetch the promo code information from the result set
+    $row = $result->fetch_assoc();
+    $promo_code_id = $row['promo_code_id'];
+    $discount_amount = $row['discount_amount'];
+    $is_active = $row['is_active'];
+  
+    // Check if the promo code exists and is active
+    if ($result->num_rows > 0 && $is_active) {
+      // Update the cart with the promo code information
+      $update_query = "UPDATE carts SET promo_code_id = $promo_code_id WHERE cart_id = $cart_id";
+      $db->query($update_query);
+  
+      // Apply the discount to the total price
+      $total_price = get_total_price($cart_id, $db);
+      $total_price -= $discount_amount;
+  
+      // Return the updated total price
+      return $total_price;
+    } else {
+      // Return false if the promo code is invalid or inactive
+      return false;
     }
-    
+  }
+     
 ?>

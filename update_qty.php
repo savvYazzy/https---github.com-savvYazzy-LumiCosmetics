@@ -1,14 +1,25 @@
 <?php
-    include_once 'db_connect.php';
-    include_once 'cart_model.php';
+require_once('database.php');
 
-    if (isset($_POST['item_id'], $_POST['qty'])) {
-        $item_id = $_POST['item_id'];
-        $qty = $_POST['qty'];
+if(isset($_POST['product_id']) && isset($_POST['qty'])) {
+    $product_id = $_POST['product_id'];
+    $new_qty = $_POST['qty'];
 
-        update_qty($item_id, $qty);
+    // Update the quantity value in the database
+    $update_query = "UPDATE cart_items SET qty = $new_qty WHERE id = $product_id";
+    $result = mysqli_query($conn, $update_query);
 
-        header("Location: cart_item.php");
+    if($result) {
+        // Quantity updated successfully
+        header('Location: cart.php');
         exit();
+    } else {
+        // Error updating quantity
+        echo "Error updating quantity";
     }
+} else {
+    // Invalid request
+    header('Location: cart.php');
+    exit();
+}
 ?>
