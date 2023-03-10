@@ -23,7 +23,7 @@
      <button type="submit" class="">Submit Message</button><br>
         <p class="form-messege"></p>
    
-    </form>
+</form>
     
                              
 
